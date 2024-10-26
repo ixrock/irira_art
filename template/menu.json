@@ -1,0 +1,18 @@
+[
+  { "title": "Home", "url": "/"},
+  { "title": "About", "url": "/about"},
+  {
+    "title": "My Art",
+    "url": "/my-art",
+    "menu": [
+      { "title": "Oil Painting", "url": "/oil-painting"},
+      { "title": "Eco Art", "url": "/eco-art"},
+      { "title": "Eco Jewellery", "url": "/eco-jewellery"},
+      { "title": "Digital art", "url": "/digital-art"},
+      { "title": "More art", "url": "/more-art"}
+    ]
+  },
+  { "title": "Commissions", "url": "/commissions"},
+  { "title": "Buy now", "url": "/buy-now"},
+  { "title": "Contacts", "url": "/contacts"}
+]

@@ -1,0 +1,23 @@
+/*========= header =========*/
+
+header .social-icons {
+  padding: 10px;
+}
+
+header .social-icons a {
+  display: inline-block;
+  text-decoration: none;
+  width: 25px;
+  height: 25px;
+}
+
+header .social-icons img {
+  width: inherit;
+  height: inherit;
+}
+
+header .logo {
+  height: 8vw;
+  min-height: 120px;
+  background: url("/img/header.jpg") no-repeat center / cover;
+}
