@@ -19,5 +19,5 @@ header .social-icons img {
 header .logo {
   height: 8vw;
   min-height: 120px;
-  background: url("/img/header.jpg") no-repeat center / cover;
+  background: url("/header.jpg") no-repeat center / cover;
 }

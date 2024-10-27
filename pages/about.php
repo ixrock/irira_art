@@ -4,7 +4,7 @@ $pageTitle = "Iri Ra - about me";
 
 $pageContent = '
 <section class="about">
-    <img src="../img/about/at_work.jpg" alt="At work">
+    <img src="../about/at_work.jpg" alt="At work">
     <br>
     <br>
     I’m Iri Ra &mdash; a young artist originally from Russia, Saint Petersburg. I began studying art from a little age, first in an art school then, after moving with my family to Finland, I started to learn art by myself. I also visited art classes in Irida Art School and studied art from Russian artists Viktor Markelov and Elena Kor in their gallery in Helsinki. Finished Graphic Design College «Vantaan ammattiopisto Varia».
