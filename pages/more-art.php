@@ -7,19 +7,19 @@ $dragonImg = printImagesFolder(__DIR__ . '/../img/more_art/dragon');
 $scorpionImg = printImagesFolder(__DIR__ . '/../img/more_art/scorpion');
 
 $pageContent = <<<PAGE
-<section class="more-art">
+<section className="more-art">
   <h1>More art</h1>
 
   <h3>Graphics and watercolor art</h3>
-  <div class="images">{$graphicsImg}</div>
+  <div className="images">{$graphicsImg}</div>
 
   <h3>A Dragon</h3>
-  <div class="images">{$dragonImg}</div>
+  <div className="images">{$dragonImg}</div>
 
   <h3>A scorpion from avocado seeds</h3>
-  <div class="images">{$scorpionImg}</div>
+  <div className="images">{$scorpionImg}</div>
 
   <h3>Ceramics</h3>
-  <div class="images">{$ceramicsImg}</div>
+  <div className="images">{$ceramicsImg}</div>
 </section>
 PAGE;

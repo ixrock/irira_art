@@ -5,7 +5,7 @@ $images = printImagesFolder(__DIR__ . "/../img/eco_jewellery/main");
 $forestImages = printImagesFolder(__DIR__ . "/../img/eco_jewellery/forest");
 
 $pageContent = <<<PAGE
-<section class="eco-jewellery">
+<section className="eco-jewellery">
   <h1>Eco jewellery from avocado seeds</h1>
   <br>
   <p>
@@ -14,9 +14,9 @@ $pageContent = <<<PAGE
   </p>
   <br>
   <br>
-  <div class="images small">{$images}</div>
+  <div className="images small">{$images}</div>
 
   <h3>Photos from the forest</h3>
-  <div class="images small">{$forestImages}</div>
+  <div className="images small">{$forestImages}</div>
 </section>
 PAGE;

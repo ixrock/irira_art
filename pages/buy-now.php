@@ -3,11 +3,11 @@
 $pageTitle = "Iri Ra - buy now";
 
 $pageContent = '
-<section class="buy-now">
+<section className="buy-now">
     <h1>Buy now</h1>
     <br>
     <br>
-    <div class="flex gaps">
+    <div className="flex gaps">
       <a href="https://www.saatchiart.com/account/profile/959668" target="_blank">
         <img src="/img/buy/saatchiart.jpg" alt="Original art">
       </a>

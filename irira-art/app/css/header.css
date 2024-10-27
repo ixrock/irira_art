@@ -2,13 +2,16 @@
 
 header .social-icons {
   padding: 10px;
+  display: flex;
+  gap: 10px;
 }
 
 header .social-icons a {
+  --icon-size: 25px;
   display: inline-block;
   text-decoration: none;
-  width: 25px;
-  height: 25px;
+  width: var(--icon-size);
+  height: var(--icon-size);
 }
 
 header .social-icons img {

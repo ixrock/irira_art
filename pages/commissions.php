@@ -3,7 +3,7 @@
 $pageTitle = "Iri Ra - commissions";
 
 $pageContent = '
-<section class="commissions">
+<section className="commissions">
     <h1>Commission art</h1>
 
     <h2>A PORTRAIT</h2>
@@ -14,7 +14,7 @@ $pageContent = '
     I’ll be glad to make it for you in my unique artistic style.
     <br>
     <br>
-    <div class="flex gaps portraits">
+    <div className="flex gaps portraits">
       <a href="/img/commissons/DSCN7050.jpg"><img src="/img/commissons/DSCN7050.jpg" alt=""></a>
       <a href="/img/commissons/DSCN6792.jpg"><img src="/img/commissons/DSCN6792.jpg" alt=""></a>
       <a href="/img/commissons/estas_tonne.jpg"><img src="/img/commissons/estas_tonne.jpg" alt=""></a>
@@ -38,7 +38,7 @@ $pageContent = '
     is a limit for options.
     <br>
     <br>
-    <div class="flex gaps wedding">
+    <div className="flex gaps wedding">
       <a href="/img/commissons/wedding-small.jpg"><img src="/img/commissons/wedding-small.jpg" alt=""></a>
       <a href="/img/commissons/wedding-gift.jpg"><img src="/img/commissons/wedding-gift.jpg" alt=""></a>
     </div>

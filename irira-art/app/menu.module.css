@@ -1,0 +1,57 @@
+/*========= top main .menu =========*/
+
+.Menu {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: Lato, sans-serif;
+  font-size: 95%;
+}
+
+.Menu * {
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 5px;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.Menu a {
+  transition: .25s color;
+}
+
+.Menu a:hover:not(.active) {
+  color: lightskyblue;
+}
+
+.Menu .active {
+  color: dodgerblue;
+}
+
+.subMenu {
+  position: relative;
+}
+
+.subMenu:hover > .items {
+  visibility: visible;
+  opacity: 1;
+}
+
+.subMenu .items {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  text-align: left;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, .2);
+  background: #0c1239;
+  margin: 0;
+  padding: 10px;
+  visibility: hidden;
+  opacity: 0;
+  transition: 250ms opacity;
+}
+
+.subMenu .items a {
+  display: block;
+}

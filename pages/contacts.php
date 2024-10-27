@@ -24,11 +24,11 @@ if ($antiSpamFilterOk && $user && $message) {
 }
 
 $pageContent = '
-<section class="contacts">
+<section className="contacts">
     <h1>Contact me</h1>
     Feel free to contact me if you wish some commission art or if you have any questions or just to say Hi!
     <p>
-      My email &mdash; <a href="javascript:;" data-email="' . base64_encode($email) . '" class="email"></a>
+      My email &mdash; <a href="javascript:;" data-email="' . base64_encode($email) . '" className="email"></a>
     </p>
     <form method="post">
       <input required name="username" placeholder="Your name" autofocus>

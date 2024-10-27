@@ -1,1 +1,4 @@
-@import "css/index.css";
+@import "css/common.css";
+@import "css/fonts.css";
+@import "css/header.css";
+@import "css/utils.css";
