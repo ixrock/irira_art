@@ -1,11 +1,34 @@
-import "./home.css";
+import "./css/home.css";
 import React from "react";
 import { Metadata } from "next";
-import Link from "next/link";
+import { Carousel, CarouselItem } from "@/app/components/carousel";
 
 export const metadata: Metadata = {
   title: "Iri Ra - Spiritual artist",
 }
+
+const carouselItems: CarouselItem[] = [
+  {
+    imageSrc: "/img/home/digitalart.jpg",
+    title: "Digital art",
+    linkUrl: "/digital-art"
+  },
+  {
+    imageSrc: "/img/home/eco_art.jpg",
+    title: "Eco art",
+    linkUrl: "/eco-art"
+  },
+  {
+    imageSrc: "/img/home/jewellery.jpg",
+    title: "Handcrafted jewellery",
+    linkUrl: "/eco-jewellery"
+  },
+  {
+    imageSrc: "/img/home/oilpainting.jpg",
+    title: "Oil painting",
+    linkUrl: "/oil-painting"
+  }
+];
 
 export default function Home() {
   return (
@@ -19,22 +42,9 @@ export default function Home() {
         </p>
       </div>
 
-      <div className="carousel">
-        <Link href="/digital-art">
-          <img src="/img/home/digitalart.jpg" alt="Digital art"/>
-        </Link>
-        <Link href="/eco-art">
-          <img src="/img/home/eco_art.jpg" alt="Eco art"/>
-        </Link>
-        <Link href="/eco-jewellery">
-          <img src="/img/home/jewellery.jpg" alt="Handcrafted jewellery"/>
-        </Link>
-        <Link href="/oil-painting">
-          <img src="/img/home/oilpainting.jpg" alt="Oil painting"/>
-        </Link>
-      </div>
+      <Carousel items={carouselItems}/>
 
-      <div className="flex gaps joinMe">
+      <div className="joinMe">
         <a href="https://www.facebook.com/Mudra-Unique-Art-Creations-By-Iri-262591347114916/" target="_blank">
           <img src="/img/home/join_me_fb.jpg" alt="Facebook"/>
         </a>

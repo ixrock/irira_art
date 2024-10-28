@@ -1,0 +1,17 @@
+.home {
+}
+
+.welcome {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.joinMe {
+  display: flex;
+  gap: var(--spacingDouble);
+  padding: var(--spacing);
+
+  img {
+    width: 100%;
+  }
+}

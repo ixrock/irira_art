@@ -1,0 +1,35 @@
+.carousel {
+  overflow: hidden;
+
+  > .carouselSlider {
+    --intervalTime: calc(var(--slides) * 10s); /* time for one full rotation */
+    --slidesTotal: calc(var(--slides) + 1); /* extra +1 for smooth animation rotation */
+
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(var(--slidesTotal), minmax(100%, var(--maxWidth)));
+    grid-auto-flow: column;
+    gap: var(--spacing);
+    animation: carousel var(--intervalTime) infinite;
+    animation-timing-function: linear;
+    animation-delay: 1s;
+
+    .image {
+      width: 100%;
+    }
+
+    &:hover {
+      /*animation-direction: reverse;*/
+      animation-play-state: paused;
+    }
+  }
+}
+
+@keyframes carousel {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(var(--slides) * -100%));
+  }
+}

@@ -3,18 +3,11 @@
 .flex {
   display: flex;
   align-items: flex-start;
+  gap: 20px;
 }
 
 .flex.column {
   flex-direction: column;
-}
-
-.flex.gaps:not(.column) > :not(:first-child) {
-  margin-left: 20px;
-}
-
-.flex.gaps.column > :not(:first-child) {
-  margin-top: 20px;
 }
 
 .flex > * {

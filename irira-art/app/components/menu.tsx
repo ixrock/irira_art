@@ -38,7 +38,7 @@ export default function Menu() {
         if (subMenu) {
           return (
             <div key={href} className={cssNames(styles.subMenu, { [styles.active]: pathname === href })}>
-              <Link href={href}>{name}</Link>
+              <Link href={href}>▼ {name}</Link>
               <div className={styles.items}>
                 {subMenu.map(({ name, href }) => {
                   return (

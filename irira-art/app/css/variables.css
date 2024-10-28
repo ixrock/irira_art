@@ -1,0 +1,12 @@
+/*========= CSS-variables (available in any other .css file) =========*/
+
+:root {
+  /* Dimensions */
+  --maxWidth: 1200px;
+  --spacing: 15px;
+  --spacingDouble: calc(var(--spacing) * 2);
+  --iconSize: 25px;
+
+  /* Colors */
+  --linkColor: lightskyblue;
+}

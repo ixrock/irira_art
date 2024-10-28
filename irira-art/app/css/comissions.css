@@ -1,0 +1,10 @@
+/*========= commissions =========*/
+
+.commissions .portraits {
+  align-items: center;
+}
+
+.commissions .wedding {
+  width: 50%;
+  margin: auto;
+}

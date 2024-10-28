@@ -1,0 +1,20 @@
+/* image galleries */
+
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.images > * {
+  margin: 10px;
+  flex: 1 1 200px;
+}
+
+.images.small > * {
+  flex-basis: 150px;
+}
+
+.images.big > * {
+  flex-basis: 250px;
+}

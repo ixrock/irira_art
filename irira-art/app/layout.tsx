@@ -3,7 +3,7 @@ import type React from "react";
 import type { Metadata } from "next";
 import Image from "next/image";
 import localFont from "next/font/local";
-import Menu from "@/app/menu";
+import Menu from "@/app/components/menu";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -35,21 +35,23 @@ export default function RootLayout(
     <body className={`${geistSans.variable} ${geistMono.variable}`}>
     <main>
       <header>
-        <div className="social-icons">
-          <a href="https://vk.com/uniqueartcreations" target="_blank">
-            <Image src="/vk.svg" width={32} height={32} alt="Vk.com"/>
-          </a>
-          <a href="https://www.facebook.com/Mudra-Unique-Art-Creations-By-Iri-262591347114916/" target="_blank">
-            <Image src="/facebook.svg" width={32} height={32} alt="Facebook"/>
-          </a>
-          <a href="https://www.instagram.com/iri_ra/" target="_blank">
-            <Image src="/instagram.svg" width={32} height={32} alt="Instagram"/>
-          </a>
-        </div>
-        <div className="logo"></div>
+        <div className="logo"/>
+        <Menu/>
       </header>
-      <Menu/>
-      {children}
+      <div className="page-content">
+        {children}
+      </div>
+      <footer className="social-icons">
+        <a href="https://vk.com/uniqueartcreations" target="_blank">
+          <Image src="/vk.svg" width={32} height={32} alt="Vk.com"/>
+        </a>
+        <a href="https://www.facebook.com/Mudra-Unique-Art-Creations-By-Iri-262591347114916/" target="_blank">
+          <Image src="/facebook.svg" width={32} height={32} alt="Facebook"/>
+        </a>
+        <a href="https://www.instagram.com/iri_ra/" target="_blank">
+          <Image src="/instagram.svg" width={32} height={32} alt="Instagram"/>
+        </a>
+      </footer>
     </main>
     </body>
     </html>
