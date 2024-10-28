@@ -9,7 +9,7 @@
 .joinMe {
   display: flex;
   gap: var(--spacingDouble);
-  padding: var(--spacing);
+  padding: var(--spacing) 0;
 
   img {
     width: 100%;

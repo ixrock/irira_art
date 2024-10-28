@@ -19,16 +19,17 @@
 }
 
 .Menu a {
-  transition: .25s color;
+  transition: 500ms color;
 
   &:hover:not(.active) {
-    color: lightskyblue;
+    color: var(--linkColor);
   }
 }
 
 .Menu .active {
+  color: dodgerblue;
   pointer-events: none;
-  border-bottom: 2px solid dodgerblue;
+  border-bottom: 2px solid;
 }
 
 .subMenu {

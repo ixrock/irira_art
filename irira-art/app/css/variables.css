@@ -8,5 +8,7 @@
   --iconSize: 25px;
 
   /* Colors */
-  --linkColor: lightskyblue;
+  --bgcMain: #E8CEBF;
+  --textColorMain: #92657a;
+  --linkColor: rgba(from var(--textColorMain) r g b / .75);
 }
