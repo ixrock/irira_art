@@ -24,7 +24,7 @@ export const siteMenu: MenuItem[] = [
       { "name": "More art", "href": "/gallery/more-art" },
     ],
   },
-  { "name": "Commissions", "href": "/comissions" },
+  { "name": "Commissions", "href": "/commissions" },
   { "name": "Buy now", "href": "/buy-now" },
   { "name": "Contact me", "href": "mailto:artofirira@gmail.com" },
 ];

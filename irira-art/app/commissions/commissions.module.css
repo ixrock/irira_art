@@ -1,0 +1,13 @@
+.commissions {
+}
+
+.portraits, .wedding {
+  display: flex;
+  gap: var(--spacing);
+  align-items: center;
+}
+
+.wedding {
+  width: 50%;
+  margin: auto;
+}

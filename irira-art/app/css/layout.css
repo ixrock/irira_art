@@ -98,6 +98,18 @@ button:focus {
   border-color: inherit;
 }
 
+.flex {
+  display: flex;
+
+  &.gaps {
+    gap: var(--flex-spacing, var(--spacing));
+  }
+
+  &.column {
+    flex-direction: column;
+  }
+}
+
 /* links with images mouseover-effect */
 
 a:hover img {
