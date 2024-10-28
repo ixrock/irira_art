@@ -20,10 +20,10 @@
 
 .Menu a {
   transition: .25s color;
-}
 
-.Menu a:hover:not(.active) {
-  color: lightskyblue;
+  &:hover:not(.active) {
+    color: lightskyblue;
+  }
 }
 
 .Menu .active {
@@ -33,6 +33,11 @@
 
 .subMenu {
   position: relative;
+
+  .link::before {
+    content: "▼ ";
+    font-size: .75rem;
+  }
 }
 
 .subMenu:hover > .items {

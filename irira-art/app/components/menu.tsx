@@ -79,7 +79,9 @@ export function SubMenuItem({ item, subMenu, className }: SubMenuItemProps) {
 
   return (
     <div key={href} className={styles.subMenu}>
-      <Link href={href} className={cssNames(className)}>▼ {name}</Link>
+      <Link href={href} className={cssNames(className, styles.link)}>
+        {name}
+      </Link>
       <div className={styles.items}>
         {(subMenu as MenuItem[]).map(({ name, href, className }) => {
           return (
