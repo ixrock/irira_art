@@ -2,7 +2,7 @@ import styles from './buy-now.module.css'
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Commissions",
+  title: "Buy now",
 }
 
 export default function BuyNow() {

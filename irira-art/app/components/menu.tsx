@@ -4,12 +4,13 @@ import styles from "./menu.module.css"
 import React from "react";
 import Link from "next/link";
 import { usePathname } from 'next/navigation'
-import { cssNames } from "@/app/utils";
+import { cssNames, IClassName, IClassNameMap } from "@/app/utils";
 
 export interface MenuItem {
   name: string;
   href: string;
   subMenu?: MenuItem[];
+  className?: IClassName;
 }
 
 export const siteMenu: MenuItem[] = [
@@ -32,28 +33,62 @@ export const siteMenu: MenuItem[] = [
 export default function Menu() {
   const pathname = usePathname();
 
+  function getLinkCSSProps(href: string): IClassNameMap {
+    return {
+      [styles.active]: pathname === href,
+    };
+  }
+
   return (
     <menu className={styles.Menu}>
-      {siteMenu.map(({ name, href, subMenu }) => {
+      {siteMenu.map((menuItem, index) => {
+        const { name, href, subMenu } = menuItem;
+
         if (subMenu) {
           return (
-            <div key={href} className={cssNames(styles.subMenu, { [styles.active]: pathname === href })}>
-              <Link href={href}>▼ {name}</Link>
-              <div className={styles.items}>
-                {subMenu.map(({ name, href }) => {
-                  return (
-                    <Link key={href} href={href} className={cssNames({ [styles.active]: pathname === href })}>
-                      {name}
-                    </Link>
-                  )
-                })}
-              </div>
-            </div>
+            <SubMenuItem
+              key={href}
+              item={menuItem}
+              className={getLinkCSSProps(href)}
+              subMenu={subMenu.map((item) => ({
+                ...item,
+                className: getLinkCSSProps(item.href),
+              }))}
+            />
           )
         }
 
-        return <Link key={href} href={href}>{name}</Link>
+        return (
+          <Link key={href} href={href} className={cssNames(getLinkCSSProps(href))}>
+            {name}
+          </Link>
+        )
       })}
     </menu>
   );
+}
+
+export interface SubMenuItemProps {
+  className?: IClassName;
+  item: MenuItem;
+  subMenu: MenuItem[];
+}
+
+export function SubMenuItem({ item, subMenu, className }: SubMenuItemProps) {
+  const { href, name } = item;
+
+  return (
+    <div key={href} className={styles.subMenu}>
+      <Link href={href} className={cssNames(className)}>▼ {name}</Link>
+      <div className={styles.items}>
+        {(subMenu as MenuItem[]).map(({ name, href, className }) => {
+          return (
+            <Link key={href} href={href} className={cssNames(className)}>
+              {name}
+            </Link>
+          )
+        })}
+      </div>
+    </div>
+  )
 }

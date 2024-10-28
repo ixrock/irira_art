@@ -1,6 +1,6 @@
 // Helper for combining css classes inside components
 
-export type IClassName = string | string[] | IClassNameMap;
+export type IClassName = string | string[] | IClassNameMap | undefined;
 export type IClassNameMap = Record<string, boolean | any>;
 
 export function cssNames(...args: IClassName[]): string {

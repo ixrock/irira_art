@@ -27,7 +27,8 @@
 }
 
 .Menu .active {
-  color: dodgerblue;
+  pointer-events: none;
+  border-bottom: 2px solid dodgerblue;
 }
 
 .subMenu {
