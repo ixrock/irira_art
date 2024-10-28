@@ -48,8 +48,11 @@ export default function RootLayout(
         <a href="https://www.facebook.com/Mudra-Unique-Art-Creations-By-Iri-262591347114916/" target="_blank">
           <Image src="/facebook.svg" width={32} height={32} alt="Facebook"/>
         </a>
-        <a href="https://www.instagram.com/iri_ra/" target="_blank">
+        <a href="https://www.instagram.com/iri.ra_art" target="_blank">
           <Image src="/instagram.svg" width={32} height={32} alt="Instagram"/>
+        </a>
+        <a href="https://www.youtube.com/@irira4006" target="_blank">
+          <Image src="/youtube.svg" width={32} height={32} alt="YouTube Channel"/>
         </a>
       </footer>
     </main>
