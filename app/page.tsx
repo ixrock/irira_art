@@ -11,22 +11,22 @@ const carouselItems: CarouselItem[] = [
   {
     imageSrc: "/img/home/digitalart.jpg",
     title: "Digital art",
-    linkUrl: "/digital-art"
+    linkUrl: "/gallery/digital-art"
   },
   {
     imageSrc: "/img/home/eco_art.jpg",
     title: "Eco art",
-    linkUrl: "/eco-art"
+    linkUrl: "/gallery/eco-art"
   },
   {
     imageSrc: "/img/home/jewellery.jpg",
     title: "Handcrafted jewellery",
-    linkUrl: "/eco-jewellery"
+    linkUrl: "/gallery/eco-jewellery"
   },
   {
     imageSrc: "/img/home/oilpainting.jpg",
     title: "Oil painting",
-    linkUrl: "/oil-painting"
+    linkUrl: "/gallery/oil-painting"
   }
 ];
 
