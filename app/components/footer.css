@@ -3,4 +3,5 @@
   display: flex;
   justify-content: right;
   gap: var(--spacing);
+  margin-top: var(--spacing);
 }
