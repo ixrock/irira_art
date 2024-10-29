@@ -1,4 +1,5 @@
 .socialIcons {
+  position: relative;
   display: flex;
   justify-content: right;
   gap: var(--spacing);
