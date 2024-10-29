@@ -4,16 +4,16 @@ import { getFilesList } from "@/app/server-actions";
 import Gallery from "@/app/components/gallery";
 
 export const metadata: Metadata = {
-  title: "Digital Art",
+  title: "Oil Painting",
 }
 
-export default async function DigitalArtGallery() {
-  const files = await getFilesList("img/digital_art");
+export default async function OilPaintingGallery() {
+  const files = await getFilesList("img/oil_painting");
 
   return (
     <section>
-      <h1>Digital Art</h1>
-      <Gallery files={files} />
+      <h1>Oil Painting</h1>
+      <Gallery files={files}/>
     </section>
   )
 };

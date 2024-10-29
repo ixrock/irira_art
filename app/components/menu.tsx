@@ -20,7 +20,7 @@ export const siteMenu: MenuItem[] = [
     "name": "My Art", "href": "/gallery", "subMenu": [
       { "name": "Oil Painting", "href": "/gallery/oil-painting" },
       { "name": "Eco Art", "href": "/gallery/eco-art" },
-      { "name": "Eco Jewellery", "href": "/gallery/oil-jewellery" },
+      { "name": "Eco Jewellery", "href": "/gallery/eco-jewellery" },
       { "name": "Digital art", "href": "/gallery/digital-art" },
       { "name": "More art", "href": "/gallery/more-art" },
     ],
