@@ -27,6 +27,12 @@ section + section {
 
 a {
   color: var(--linkColor);
+  text-decoration: none;
+}
+
+a:hover img {
+  /* links with mouseover-effect for inner images */
+  filter: contrast(1.1) brightness(1.1);
 }
 
 img {
@@ -107,35 +113,5 @@ button:focus {
 
   &.column {
     flex-direction: column;
-  }
-}
-
-/* links with images mouseover-effect */
-
-a:hover img {
-  filter: contrast(1.1) brightness(1.1);
-}
-
-/* header */
-
-header .logo {
-  height: 8vw;
-  min-height: 120px;
-  background: url("/header.jpg") no-repeat center / cover;
-  filter: sepia(.5);
-}
-
-/* footer */
-
-.social-icons {
-  display: flex;
-  gap: var(--spacing);
-  justify-content: right;
-
-  img {
-    display: inline-block;
-    text-decoration: none;
-    width: var(--iconSize);
-    height: var(--iconSize);
   }
 }

@@ -3,7 +3,9 @@
 :root {
   /* Dimensions */
   --maxWidth: 1200px;
-  --spacing: 15px;
+  --borderRadius: 5px;
+  --spacing: 12px;
+  --spacingHalf: calc(var(--spacing) / 2);
   --spacingDouble: calc(var(--spacing) * 2);
   --iconSize: 25px;
 

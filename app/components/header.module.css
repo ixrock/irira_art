@@ -1,0 +1,12 @@
+
+.header {
+}
+
+.logo {
+  height: 8vw;
+  min-height: 120px;
+  background: url("/header.jpg") no-repeat center / cover;
+  filter: sepia(.5);
+  border-top-left-radius: var(--borderRadius);
+  border-top-right-radius: var(--borderRadius);
+}

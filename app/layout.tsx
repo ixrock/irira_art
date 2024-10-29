@@ -1,9 +1,9 @@
 import "./globals.css";
 import type React from "react";
 import type { Metadata } from "next";
-import Image from "next/image";
 import localFont from "next/font/local";
-import Menu from "@/app/components/menu";
+import Footer from "@/app/components/footer";
+import Header from "@/app/components/header";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -34,27 +34,11 @@ export default function RootLayout(
     <html lang="en">
     <body className={`${geistSans.variable} ${geistMono.variable}`}>
     <main>
-      <header>
-        <div className="logo"/>
-        <Menu/>
-      </header>
+      <Header/>
       <div className="page-content">
         {children}
       </div>
-      <footer className="social-icons">
-        <a href="https://vk.com/uniqueartcreations" target="_blank">
-          <Image src="/vk.svg" width={32} height={32} alt="Vk.com"/>
-        </a>
-        <a href="https://www.facebook.com/Mudra-Unique-Art-Creations-By-Iri-262591347114916/" target="_blank">
-          <Image src="/facebook.svg" width={32} height={32} alt="Facebook"/>
-        </a>
-        <a href="https://www.instagram.com/iri.ra_art" target="_blank">
-          <Image src="/instagram.svg" width={32} height={32} alt="Instagram"/>
-        </a>
-        <a href="https://www.youtube.com/@irira4006" target="_blank">
-          <Image src="/youtube.svg" width={32} height={32} alt="YouTube Channel"/>
-        </a>
-      </footer>
+      <Footer/>
     </main>
     </body>
     </html>

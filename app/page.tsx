@@ -51,8 +51,7 @@ export default function Home() {
         <a href="https://www.instagram.com/iri_ra/" target="_blank">
           <img src="/img/home/join_me_insta.jpg" alt="Instagram"/>
         </a>
-        {/* TODO: double check correct Youtube channel URL */}
-        <a href="https://www.youtube.com/channel/UC4-Wf4aDDNmC1Ra1LSn3wqA" target="_blank">
+        <a href="https://www.youtube.com/@irira4006" target="_blank">
           <img src="/img/home/join_me_youtube.jpg" alt="Youtube"/>
         </a>
       </div>

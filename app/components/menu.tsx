@@ -33,7 +33,7 @@ export const siteMenu: MenuItem[] = [
 export default function Menu() {
   const pathname = usePathname();
 
-  function getLinkCSSProps(href: string): IClassNameMap {
+  function getLinkClassNames(href: string): IClassNameMap {
     return {
       [styles.active]: pathname === href,
     };
@@ -49,17 +49,17 @@ export default function Menu() {
             <SubMenuItem
               key={href}
               item={menuItem}
-              className={getLinkCSSProps(href)}
+              className={getLinkClassNames(href)}
               subMenu={subMenu.map((item) => ({
                 ...item,
-                className: getLinkCSSProps(item.href),
+                className: getLinkClassNames(item.href),
               }))}
             />
           )
         }
 
         return (
-          <Link key={href} href={href} className={cssNames(getLinkCSSProps(href))}>
+          <Link key={href} href={href} className={cssNames(getLinkClassNames(href))}>
             {name}
           </Link>
         )
@@ -78,7 +78,7 @@ export function SubMenuItem({ item, subMenu, className }: SubMenuItemProps) {
   const { href, name } = item;
 
   return (
-    <div key={href} className={styles.subMenu}>
+    <div key={href} className={styles.SubMenu}>
       <Link href={href} className={cssNames(className, styles.link)}>
         {name}
       </Link>
