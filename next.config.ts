@@ -1,8 +1,6 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // output: "export",
-
   webpack(config) {
     // import files as inline SVG-components (XML)
     config.module.rules.push({

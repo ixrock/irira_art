@@ -73,3 +73,7 @@
 .SubMenu .items a {
   display: block;
 }
+
+.Icon {
+  margin-right: 3px;
+}

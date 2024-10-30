@@ -9,9 +9,7 @@
 
 body {
   background-color: var(--bgcMain);
-  font-family: MinionPro, "Times New Roman", serif;
-  font-size: 18px;
-  line-height: 1.2;
+  font: var(--textSizeMain) / 1.2 var(--fontMain);
   color: var(--textColorMain);
 }
 
@@ -28,6 +26,7 @@ section + section {
 a {
   color: var(--linkColor);
   text-decoration: none;
+  cursor: pointer;
 }
 
 a:hover img {
@@ -42,66 +41,41 @@ img {
 }
 
 h1 {
+  font: 1.6rem/2 var(--fontHeader1);
   text-align: center;
-  line-height: 2;
-  font-weight: 500;
-  font-family: Astakhov, sans-serif;
   text-transform: uppercase;
 }
 
 h2 {
-  font-family: Lato, sans-serif;
-  font-size: 1em;
-  text-transform: uppercase;
-  line-height: 2;
-  margin-bottom: 1em;
-  border-bottom: 1px solid rgba(255, 255, 255, .2);
+  font: 2rem var(--fontHeader2);
+  margin: var(--spacing) 0;
 }
 
 h3 {
-  font-family: Monplesir, fantasy;
-  font-size: 150%;
+  font: 1.2rem/2 Lato, sans-serif;
+  text-transform: uppercase;
+  border-bottom: 1px solid;
   margin: 1em 0;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 50px;
-}
-
-textarea, input, button {
-  font: inherit;
-  padding: 10px;
-  border-radius: 5px;
-  display: block;
-  margin-bottom: 10px;
-  line-height: 1;
-  resize: vertical;
-  width: 100%;
-  max-width: 500px;
+code {
+  white-space: pre-line;
+  font-size: smaller;
 }
 
 [hidden] {
   display: none;
 }
 
-button {
-  background: dodgerblue;
-  color: white;
-  border: 2px solid transparent;
-  transition: 250ms border, 150ms background;
-  text-transform: uppercase;
-}
+svg {
+  width: var(--svgIconSize);
+  height: var(--svgIconSize);
+  vertical-align: middle;
+  color: inherit;
 
-button:disabled {
-  background: gray;
-  color: silver;
-}
-
-button:focus {
-  border-color: inherit;
+  path {
+    fill: currentColor;
+  }
 }
 
 .flex {
@@ -113,5 +87,9 @@ button:focus {
 
   &.column {
     flex-direction: column;
+  }
+
+  > * {
+    flex-shrink: 0;
   }
 }

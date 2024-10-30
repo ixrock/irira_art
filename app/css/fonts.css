@@ -1,15 +1,15 @@
-
 @font-face {
-  font-family: 'MinionPro';
+  font-family: 'MinionPro'; /* main-font <body> */
   src: url("../fonts/MinionPro-Regular.otf") format('truetype');
 }
 
 @font-face {
-  font-family: 'Monplesir';
-  src: url("../fonts/Monplesir_script.ttf") format('truetype');
+  font-family: 'Astakhov'; /* headers <h1> */
+  src: url("../fonts/Astakhov_First_Simple.ttf") format('truetype');
+  font-weight: 500;
 }
 
 @font-face {
-  font-family: 'Astakhov';
-  src: url("../fonts/Astakhov_First_Simple.ttf") format('truetype');
+  font-family: 'Monplesir'; /* other headers */
+  src: url("../fonts/Monplesir_script.ttf") format('truetype');
 }

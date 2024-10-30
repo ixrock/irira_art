@@ -1,7 +1,16 @@
 /*========= CSS-variables (available in any other .css file) =========*/
 
 :root {
+  /* Fonts */
+  --fontMain: MinionPro, serif;
+  --fontHeader1: Astakhov, sans-serif;
+  --fontHeader2: Monplesir, fantasy;
+
+  /* Icons */
+  --svgIconSize: 20px;
+
   /* Dimensions */
+  --textSizeMain: 18px;
   --maxWidth: 1200px;
   --borderRadius: 5px;
   --spacing: 12px;

@@ -3,7 +3,7 @@ import React from "react";
 export default async function GalleryLayout(props: React.PropsWithChildren) {
   return (
     <section>
-      <h3>My Art</h3>
+      <h2>My Art</h2>
       {props.children}
     </section>
   );

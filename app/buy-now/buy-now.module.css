@@ -1,2 +1,12 @@
-.buyNow {
+
+.images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacingDouble);
+}
+
+.images img {
+  width: 100%;
+  height: 100%;
+  /*object-fit: cover;*/
 }

@@ -17,16 +17,16 @@ export default async function MoreAreGallery() {
     <section>
       <h1>More art</h1>
 
-      <h2>Graphics and watercolor art</h2>
+      <h3>Graphics and watercolor art</h3>
       <Gallery files={graphicsImages}/>
 
-      <h2>A Dragon</h2>
+      <h3>A Dragon</h3>
       <Gallery files={dragonImages}/>
 
-      <h2>A scorpion from avocado seeds</h2>
+      <h3>A scorpion from avocado seeds</h3>
       <Gallery files={scorpionImages}/>
 
-      <h2>Ceramics</h2>
+      <h3>Ceramics</h3>
       <Gallery files={ceramicsImages}/>
     </section>
   )

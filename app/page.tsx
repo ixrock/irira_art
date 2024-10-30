@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const carouselItems: CarouselItem[] = [
   {
-    imageSrc: "/img/home/digitalart.jpg",
+    imageSrc: "/img/home/digitalart.jpg", // 1200x374
     title: "Digital art",
     linkUrl: "/gallery/digital-art"
   },

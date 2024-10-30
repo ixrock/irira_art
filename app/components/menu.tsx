@@ -6,10 +6,12 @@ import Link from "next/link";
 import { usePathname } from 'next/navigation'
 import { cssNames, IClassName, IClassNameMap } from "@/app/utils";
 import { contactEmail } from "@/app/common-vars";
+import EmailIconSvg from "@/public/email.svg";
 
 export interface MenuItem {
-  name: string;
+  name: React.ReactNode;
   href: string;
+  icon?: React.ReactNode;
   subMenu?: MenuItem[];
   className?: IClassName;
 }
@@ -28,7 +30,11 @@ export const siteMenu: MenuItem[] = [
   },
   { "name": "Commissions", "href": "/commissions" },
   { "name": "Buy now", "href": "/buy-now" },
-  { "name": "Contact me", "href": `mailto:${contactEmail}` },
+  {
+    "name": "Contact me",
+    "href": `mailto:${contactEmail}`,
+    icon: <EmailIconSvg className={styles.Icon}/>,
+  },
 ];
 
 export default function Menu() {
@@ -43,14 +49,14 @@ export default function Menu() {
   return (
     <menu className={styles.Menu}>
       {siteMenu.map((menuItem, index) => {
-        const { name, href, subMenu } = menuItem;
+        const { name, href, subMenu, className, icon } = menuItem;
 
         if (subMenu) {
           return (
             <SubMenuItem
               key={href}
               item={menuItem}
-              className={getLinkClassNames(href)}
+              className={cssNames(className, getLinkClassNames(href))}
               subMenu={subMenu.map((item) => ({
                 ...item,
                 className: getLinkClassNames(item.href),
@@ -61,7 +67,7 @@ export default function Menu() {
 
         return (
           <Link key={href} href={href} className={cssNames(getLinkClassNames(href))}>
-            {name}
+            {icon}{name}
           </Link>
         )
       })}
@@ -76,12 +82,12 @@ export interface SubMenuItemProps {
 }
 
 export function SubMenuItem({ item, subMenu, className }: SubMenuItemProps) {
-  const { href, name } = item;
+  const { href, name, icon } = item;
 
   return (
     <div key={href} className={styles.SubMenu}>
       <Link href={href} className={cssNames(className, styles.link)}>
-        {name}
+        {icon}{name}
       </Link>
       <div className={styles.items}>
         {(subMenu as MenuItem[]).map(({ name, href, className }) => {

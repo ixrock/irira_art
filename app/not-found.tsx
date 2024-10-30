@@ -2,8 +2,8 @@ import React from "react";
 
 export default function NotFound() {
   return (
-    <section className="page-not-found">
-      Oops! Page not found..
+    <section>
+      <h1>404: Page not found..</h1>
     </section>
   );
 }
