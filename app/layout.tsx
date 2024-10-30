@@ -1,6 +1,7 @@
 import "./globals.css";
 import type React from "react";
 import type { Metadata } from "next";
+import { GoogleAnalytics } from "@next/third-parties/google"
 import Footer from "@/app/components/footer";
 import Header from "@/app/components/header";
 
@@ -23,12 +24,11 @@ export default function RootLayout(
     <body>
     <main>
       <Header/>
-      <div className="page-content">
-        {children}
-      </div>
+      {children}
       <Footer/>
     </main>
     </body>
+    <GoogleAnalytics gaId="UA-100107354-1"/>
     </html>
   );
 }
