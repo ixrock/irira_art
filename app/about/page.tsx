@@ -31,7 +31,7 @@ export default function About() {
       I was on the stage with a theater project named “Kuka pelkää pimeää?» in the National Theater of Helsinki.
       <br/>
       <br/>
-      <div className="flex gaps">
+      <div className="images flex gaps">
         <p><img src="/img/about/in_flowers.jpg" alt="Flowers mood"/></p>
         <p><img src="/img/about/in_woods.jpg" alt="Into the wild"/></p>
       </div>
