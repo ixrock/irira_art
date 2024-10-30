@@ -2,6 +2,7 @@ import "./css/home.css";
 import React from "react";
 import { Metadata } from "next";
 import { Carousel, CarouselItem } from "@/app/components/carousel";
+import { fbLink, instagramLink, youtubeLink } from "@/app/common-vars";
 
 export const metadata: Metadata = {
   title: "Iri Ra - Spiritual artist",
@@ -45,13 +46,13 @@ export default function Home() {
       <Carousel items={carouselItems}/>
 
       <div className="joinMe">
-        <a href="https://www.facebook.com/Mudra-Unique-Art-Creations-By-Iri-262591347114916/" target="_blank">
+        <a href={fbLink} target="_blank">
           <img src="/img/home/join_me_fb.jpg" alt="Facebook"/>
         </a>
-        <a href="https://www.instagram.com/iri_ra/" target="_blank">
+        <a href={instagramLink} target="_blank">
           <img src="/img/home/join_me_insta.jpg" alt="Instagram"/>
         </a>
-        <a href="https://www.youtube.com/@irira4006" target="_blank">
+        <a href={youtubeLink} target="_blank">
           <img src="/img/home/join_me_youtube.jpg" alt="Youtube"/>
         </a>
       </div>

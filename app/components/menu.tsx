@@ -5,6 +5,7 @@ import React from "react";
 import Link from "next/link";
 import { usePathname } from 'next/navigation'
 import { cssNames, IClassName, IClassNameMap } from "@/app/utils";
+import { contactEmail } from "@/app/common-vars";
 
 export interface MenuItem {
   name: string;
@@ -27,7 +28,7 @@ export const siteMenu: MenuItem[] = [
   },
   { "name": "Commissions", "href": "/commissions" },
   { "name": "Buy now", "href": "/buy-now" },
-  { "name": "Contact me", "href": "mailto:artofirira@gmail.com" },
+  { "name": "Contact me", "href": `mailto:${contactEmail}` },
 ];
 
 export default function Menu() {
