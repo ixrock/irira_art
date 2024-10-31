@@ -27,6 +27,10 @@ a {
   color: var(--linkColor);
   text-decoration: none;
   cursor: pointer;
+
+  &:hover {
+    color: var(--textColorMain);
+  }
 }
 
 a:hover img {
