@@ -1,18 +1,24 @@
 /*========= top main .menu =========*/
 
 .Menu {
+  font: 95% Lato, sans-serif;
   position: relative;
   display: flex;
-  gap: var(--spacing);
+  gap: var(--spacingDouble);
   padding: var(--spacing);
   justify-content: center;
-  font-family: Lato, sans-serif;
-  margin-bottom: var(--spacingDouble);
-  font-size: 95%;
-  z-index: 1;
+  align-items: center;
   background-color: #00000011;
   border-bottom-left-radius: var(--borderRadius);
   border-bottom-right-radius: var(--borderRadius);
+  z-index: 1;
+}
+
+@media screen and (max-width: 800px) {
+  .Menu {
+    flex-direction: column;
+    gap: var(--spacing);
+  }
 }
 
 .Menu a {

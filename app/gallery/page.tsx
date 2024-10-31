@@ -43,7 +43,7 @@ function GalleryPreview(props: GalleryPreviewProps) {
       <h1>{header}</h1>
       <Gallery files={files.slice(0, previewCount)}/>
       {detailsUrl && (
-        <div className={styles.viewAll}>
+        <div className={styles.showAll}>
           <Link href={detailsUrl}>Show all &rarr;</Link>
         </div>
       )}

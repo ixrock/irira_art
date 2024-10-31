@@ -1,5 +1,6 @@
 import styles from './about.module.css'
 import { Metadata } from "next";
+import { cssNames } from "@/app/utils";
 
 export const metadata: Metadata = {
   title: "About me",
@@ -31,7 +32,7 @@ export default function About() {
       I was on the stage with a theater project named “Kuka pelkää pimeää?» in the National Theater of Helsinki.
       <br/>
       <br/>
-      <div className="images flex gaps">
+      <div className={cssNames(styles.images, "flex gaps")}>
         <p><img src="/img/about/in_flowers.jpg" alt="Flowers mood"/></p>
         <p><img src="/img/about/in_woods.jpg" alt="Into the wild"/></p>
       </div>
