@@ -1,4 +1,5 @@
 .carousel {
+  border-radius: var(--borderRadius);
   overflow: hidden;
 
   > .carouselSlider {

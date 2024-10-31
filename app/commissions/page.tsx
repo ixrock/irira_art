@@ -18,10 +18,10 @@ export default function Commissions() {
       I’ll be glad to make it for you in my unique artistic style.
       <br/>
       <br/>
-      <div className={styles.portraits}>
-        <a href="/img/commissons/DSCN7050.jpg"><img src="/img/commissons/DSCN7050.jpg" alt=""/></a>
+      <div className={styles.images}>
         <a href="/img/commissons/DSCN6792.jpg"><img src="/img/commissons/DSCN6792.jpg" alt=""/></a>
         <a href="/img/commissons/estas_tonne.jpg"><img src="/img/commissons/estas_tonne.jpg" alt=""/></a>
+        <a href="/img/commissons/DSCN7050.jpg"><img src="/img/commissons/DSCN7050.jpg" alt=""/></a>
         <a href="/img/commissons/devushka.jpg"><img src="/img/commissons/devushka.jpg" alt=""/></a>
         <a href="/img/commissons/KTSydGpaqVw.jpg"><img src="/img/commissons/KTSydGpaqVw.jpg" alt=""/></a>
       </div>
@@ -42,7 +42,7 @@ export default function Commissions() {
       is a limit for options.
       <br/>
       <br/>
-      <div className={styles.wedding}>
+      <div className={styles.images}>
         <a href="/img/commissons/wedding-small.jpg"><img src="/img/commissons/wedding-small.jpg" alt=""/></a>
         <a href="/img/commissons/wedding-gift.jpg"><img src="/img/commissons/wedding-gift.jpg" alt=""/></a>
       </div>

@@ -1,13 +1,20 @@
 .commissions {
 }
 
-.portraits, .wedding {
-  display: flex;
-  gap: var(--spacing);
+.images {
+  --grid-size: 270px;
+
+  display: grid;
+  grid-template-rows: var(--grid-size);
+  grid-auto-flow: column;
+  grid-gap: var(--spacing);
   align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
-.wedding {
-  width: 50%;
-  margin: auto;
+.images img {
+  object-fit: cover;
+  height: var(--grid-size);
+  border-radius: var(--borderRadius);
 }
