@@ -1,6 +1,7 @@
 import "./globals.css";
 import type React from "react";
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/react";
 import { GoogleAnalytics } from "@next/third-parties/google"
 import Footer from "@/app/components/footer";
 import Header from "@/app/components/header";
@@ -28,6 +29,7 @@ export default function RootLayout(
       <Footer/>
     </main>
     </body>
+    <Analytics/>
     <GoogleAnalytics gaId="UA-100107354-1"/>
     </html>
   );
