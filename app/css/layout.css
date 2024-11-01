@@ -17,7 +17,6 @@ main {
   display: flex;
   flex-direction: column;
   margin: auto;
-  min-width: var(--minWidth);
   max-width: var(--maxWidth);
   padding: var(--spacingDouble);
   gap: var(--spacingDouble);
@@ -76,8 +75,8 @@ code {
 }
 
 svg {
-  width: var(--svgIconSize);
-  height: var(--svgIconSize);
+  width: var(--svgWidth);
+  height: var(--svgHeight);
   vertical-align: middle;
   color: inherit;
 

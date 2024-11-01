@@ -8,13 +8,11 @@
 
   /* Dimensions */
   --textSizeMain: 18px;
-  --minWidth: 650px; /* minimal value to cover all menu items horizontally */
   --maxWidth: 1200px;
   --borderRadius: 5px;
   --spacing: 12px;
   --spacingHalf: calc(var(--spacing) / 2);
   --spacingDouble: calc(var(--spacing) * 2);
-  --svgIconSize: 20px;
 
   /* Colors */
   --bgcMain: #E8CEBF;

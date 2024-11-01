@@ -7,6 +7,7 @@ import { usePathname } from 'next/navigation'
 import { cssNames, IClassName, IClassNameMap } from "@/app/utils";
 import { contactEmail } from "@/app/config";
 import EmailIconSvg from "@/public/email.svg";
+import DotsIconSvg from "@/public/dots.svg";
 
 export interface MenuItem {
   name: React.ReactNode;
@@ -46,31 +47,39 @@ export default function Menu() {
     };
   }
 
+  const menuItems = siteMenu.map((menuItem) => {
+    const { name, href, subMenu, className, icon } = menuItem;
+    const classNames = cssNames(getLinkClassNames(href), className);
+
+    if (subMenu) {
+      return (
+        <SubMenuItem
+          key={href}
+          item={menuItem}
+          className={cssNames(className, getLinkClassNames(href))}
+          subMenu={subMenu.map((item) => ({
+            ...item,
+            className: getLinkClassNames(item.href),
+          }))}
+        />
+      )
+    }
+
+    return (
+      <Link key={href} href={href} className={classNames}>
+        {icon}{name}
+      </Link>
+    )
+  });
+
   return (
     <menu className={styles.Menu}>
-      {siteMenu.map((menuItem, index) => {
-        const { name, href, subMenu, className, icon } = menuItem;
+      {menuItems}
 
-        if (subMenu) {
-          return (
-            <SubMenuItem
-              key={href}
-              item={menuItem}
-              className={cssNames(className, getLinkClassNames(href))}
-              subMenu={subMenu.map((item) => ({
-                ...item,
-                className: getLinkClassNames(item.href),
-              }))}
-            />
-          )
-        }
-
-        return (
-          <Link key={href} href={href} className={cssNames(getLinkClassNames(href))}>
-            {icon}{name}
-          </Link>
-        )
-      })}
+      <div className={cssNames(styles.mobileMenu, styles.SubMenu)}>
+        <DotsIconSvg/>
+        <div className={styles.items}>{menuItems.slice(3)}</div>
+      </div>
     </menu>
   );
 }
