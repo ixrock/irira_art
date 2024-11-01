@@ -2,7 +2,7 @@ import "./css/home.css";
 import React from "react";
 import { Metadata } from "next";
 import { Carousel, CarouselItem } from "@/app/components/carousel";
-import { fbLink, instagramLink, youtubeLink } from "@/app/common-vars";
+import { fbLink, instagramLink, youtubeLink } from "@/app/config";
 
 export const metadata: Metadata = {
   title: "Iri Ra - Spiritual artist",
@@ -37,8 +37,8 @@ export default function Home() {
       <div className="welcome">
         <h1>Welcome to magical realm of my art!</h1>
         <p>
-          Hello there. I'm Iri Ra, spiritual artist.
-          I create visionary art, eco art and eco jewellery.
+          Hello there. I'm Iri Ra, a spiritual artist.
+          I create visionary art, eco art, eco jewellery and digital art.
           Thank you for visiting my website!
         </p>
       </div>

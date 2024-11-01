@@ -1,9 +1,18 @@
+.header {
+  position: relative;
+}
 
 .logo {
   height: 8vw;
   min-height: 120px;
-  background: url("/header.jpg") no-repeat center / cover;
-  filter: sepia(.5);
+  background: url("/header.webp") no-repeat center -170px / cover;
+  filter: sepia(.1);
   border-top-left-radius: var(--borderRadius);
   border-top-right-radius: var(--borderRadius);
+}
+
+@media screen and (max-width: 800px) {
+  .logo {
+    background-position-y: -100px;
+  }
 }

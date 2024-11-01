@@ -4,7 +4,7 @@ import Menu from "@/app/components/menu";
 
 export default function Header() {
   return (
-    <header>
+    <header className={styles.header}>
       <div className={styles.logo}/>
       <Menu/>
     </header>

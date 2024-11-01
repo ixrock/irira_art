@@ -8,6 +8,7 @@
 
   /* Dimensions */
   --textSizeMain: 18px;
+  --minWidth: 650px; /* minimal value to cover all menu items horizontally */
   --maxWidth: 1200px;
   --borderRadius: 5px;
   --spacing: 12px;

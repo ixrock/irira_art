@@ -1,7 +1,7 @@
 import styles from "./footer.module.css"
 import React from "react";
 import Image from "@/node_modules/next/image";
-import { fbLink, instagramLink, vkLink, youtubeLink } from "@/app/common-vars";
+import { fbLink, instagramLink, vkLink, youtubeLink } from "@/app/config";
 
 export default function Footer() {
   const iconSize = 25;

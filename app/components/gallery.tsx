@@ -20,8 +20,7 @@ export default function Gallery(props: GalleryProps) {
         const newHeight = newWidth * k;
 
         return (
-          /* TODO: preload and open in dialog instead of link */
-          <a key={publicPath} href={publicPath} target="_blank">
+          <a key={publicPath} href={publicPath}>
             <Image
               className={styles.image}
               src={publicPath}

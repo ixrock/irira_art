@@ -5,7 +5,7 @@ import React from "react";
 import Link from "next/link";
 import { usePathname } from 'next/navigation'
 import { cssNames, IClassName, IClassNameMap } from "@/app/utils";
-import { contactEmail } from "@/app/common-vars";
+import { contactEmail } from "@/app/config";
 import EmailIconSvg from "@/public/email.svg";
 
 export interface MenuItem {

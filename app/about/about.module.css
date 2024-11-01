@@ -1,7 +1,12 @@
 .About {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacingDouble);
   margin: auto;
   text-align: justify;
 }
 
 .images {
+  margin: 0 50px;
+  gap: var(--spacingDouble);
 }
