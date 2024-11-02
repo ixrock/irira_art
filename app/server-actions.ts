@@ -15,7 +15,7 @@ export interface FileListing {
 }
 
 export interface FileListOptions {
-  withMetadata?: boolean; // use "sharp" metadata, e.g. "width" and "height" (default: true)
+  withMetadata?: boolean; // use "sharp" metadata to get real image dimensions (default: true)
 }
 
 export async function getFilesList(publicPath: string, opts: FileListOptions = {}): Promise<FileListing[]> {

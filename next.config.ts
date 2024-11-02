@@ -1,6 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  images: {
+    formats: ["image/webp"],
+  },
+
   webpack(config) {
     // import files as inline SVG-components (XML)
     config.module.rules.push({

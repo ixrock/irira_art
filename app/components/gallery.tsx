@@ -1,7 +1,8 @@
 import styles from "./gallery.module.css"
 import React from "react";
-import Image from "@/node_modules/next/image";
 import type { FileListing } from "@/app/server-actions";
+import Link from "@/node_modules/next/link";
+import PhotoPreview from "@/app/components/photo-preview";
 
 export interface GalleryProps {
   files: FileListing[];
@@ -13,24 +14,39 @@ export default function Gallery(props: GalleryProps) {
 
   return (
     <div className={styles.gallery}>
-      {files.map((({ publicPath, fileName, metadata }) => {
-        const { width = 0, height = 0 } = metadata;
-        const k = width / height;
-        const newWidth = Math.min(width, outputWidth);
-        const newHeight = newWidth * k;
-
+      {files.map((({ publicPath, metadata }) => {
         return (
-          <a key={publicPath} href={publicPath}>
-            <Image
-              className={styles.image}
-              src={publicPath}
-              width={newWidth}
-              height={newHeight}
-              alt={fileName}
-            />
-          </a>
-        );
+          <PhotoPreview
+            className={styles.image}
+            key={publicPath}
+            src={publicPath}
+            metadata={metadata}
+            previewWidth={outputWidth}
+          />
+        )
       }))}
     </div>
+  )
+}
+
+export interface GalleryPreviewProps {
+  header: React.ReactNode;
+  files: FileListing[];
+  detailsUrl?: string;
+  previewCount?: number; /* default: 5 */
+}
+
+export function GalleryPreview(props: GalleryPreviewProps) {
+  const { files, previewCount = 5, header, detailsUrl } = props;
+  return (
+    <>
+      <h1>{header}</h1>
+      <Gallery files={files.slice(0, previewCount)}/>
+      {detailsUrl && (
+        <div className={styles.showAll}>
+          <Link href={detailsUrl}>Show all &rarr;</Link>
+        </div>
+      )}
+    </>
   )
 }

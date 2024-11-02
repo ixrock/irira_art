@@ -1,6 +1,5 @@
 import styles from './about.module.css'
 import { Metadata } from "next";
-import { cssNames } from "@/app/utils";
 
 export const metadata: Metadata = {
   title: "About me",
@@ -30,7 +29,7 @@ export default function About() {
         sees my artwork will find and awaken within herself a beautiful Goddess, reconnecting with her divine feminine nature—her soul. In our times, women have faced much suffering, so through my
         paintings, I want to inspire women to believe in themselves and regain confidence, to see in themselves the same beautiful Goddess that I have depicted on canvas with my own hand.</p>
 
-      <div className={cssNames(styles.images, "flex gaps")}>
+      <div className={styles.images}>
         <p><img src="/img/about/in_flowers.jpg" alt="Flowers mood"/></p>
         <p><img src="/img/about/in_woods.jpg" alt="Into the wild"/></p>
       </div>

@@ -15,6 +15,7 @@
 
 .images img {
   object-fit: cover;
+  width: auto;
   height: var(--grid-size);
   border-radius: var(--borderRadius);
 }

@@ -1,9 +1,7 @@
-import styles from "./gallery.module.css";
 import React from "react";
 import { Metadata } from "next";
-import { FileListing, getFilesList } from "@/app/server-actions";
-import Gallery from "@/app/components/gallery";
-import Link from "next/link";
+import { getFilesList } from "@/app/server-actions";
+import { GalleryPreview } from "@/app/components/gallery";
 
 export const metadata: Metadata = {
   title: "My Art",
@@ -19,7 +17,7 @@ export default async function GalleryPage() {
   ]);
 
   return (
-    <div className={styles.gallery}>
+    <div>
       <GalleryPreview header="Oil painting" detailsUrl="/gallery/oil-painting" files={oil}/>
       <GalleryPreview header="Digital Art" detailsUrl="/gallery/digital-art" files={digital}/>
       <GalleryPreview header="Eco Art" detailsUrl="/gallery/eco-art" files={ecoArt}/>
@@ -28,25 +26,3 @@ export default async function GalleryPage() {
     </div>
   )
 };
-
-interface GalleryPreviewProps {
-  header: React.ReactNode;
-  files: FileListing[];
-  detailsUrl?: string;
-  previewCount?: number; /* default: 5 */
-}
-
-function GalleryPreview(props: GalleryPreviewProps) {
-  const { files, previewCount = 5, header, detailsUrl } = props;
-  return (
-    <>
-      <h1>{header}</h1>
-      <Gallery files={files.slice(0, previewCount)}/>
-      {detailsUrl && (
-        <div className={styles.showAll}>
-          <Link href={detailsUrl}>Show all &rarr;</Link>
-        </div>
-      )}
-    </>
-  )
-}

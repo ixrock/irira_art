@@ -1,5 +1,7 @@
 import styles from './commissions.module.css'
+import React from "react";
 import { Metadata } from "next";
+import PhotoPreview from "@/app/components/photo-preview";
 
 export const metadata: Metadata = {
   title: "Commissions",
@@ -19,11 +21,11 @@ export default function Commissions() {
       <br/>
       <br/>
       <div className={styles.images}>
-        <a href="/img/commissons/DSCN6792.jpg"><img src="/img/commissons/DSCN6792.jpg" alt=""/></a>
-        <a href="/img/commissons/estas_tonne.jpg"><img src="/img/commissons/estas_tonne.jpg" alt=""/></a>
-        <a href="/img/commissons/DSCN7050.jpg"><img src="/img/commissons/DSCN7050.jpg" alt=""/></a>
-        <a href="/img/commissons/devushka.jpg"><img src="/img/commissons/devushka.jpg" alt=""/></a>
-        <a href="/img/commissons/KTSydGpaqVw.jpg"><img src="/img/commissons/KTSydGpaqVw.jpg" alt=""/></a>
+        <PhotoPreview src="/img/commissons/DSCN6792.jpg"/>
+        <PhotoPreview src="/img/commissons/estas_tonne.jpg"/>
+        <PhotoPreview src="/img/commissons/DSCN7050.jpg"/>
+        <PhotoPreview src="/img/commissons/devushka.jpg"/>
+        <PhotoPreview src="/img/commissons/KTSydGpaqVw.jpg"/>
       </div>
       <br/>
       <h3>Your idea</h3>
@@ -43,8 +45,8 @@ export default function Commissions() {
       <br/>
       <br/>
       <div className={styles.images}>
-        <a href="/img/commissons/wedding-small.jpg"><img src="/img/commissons/wedding-small.jpg" alt=""/></a>
-        <a href="/img/commissons/wedding-gift.jpg"><img src="/img/commissons/wedding-gift.jpg" alt=""/></a>
+        <PhotoPreview src="/img/commissons/wedding-small.jpg"/>
+        <PhotoPreview src="/img/commissons/wedding-gift.jpg"/>
       </div>
       <h3>Invitation cards</h3>
       Are you having a wedding or some other event where you need a creative invitation cards? Please, let me know, my art works and unique style will bring colourfulness to any event! I can design

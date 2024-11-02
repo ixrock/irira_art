@@ -1,0 +1,36 @@
+import styles from "./photo-preview.module.css"
+import React from "react";
+import sharp from "sharp";
+import { getImageMetadata } from "@/app/server-actions";
+import { resizeByWidth } from "@/app/utils/resizeBy";
+import PhotoPreviewClient from "@/app/components/photo-preview-client";
+
+export interface PhotoPreviewProps {
+  src: string;
+  className?: string;
+  previewWidth?: number; /* default: 250 */
+  metadata?: sharp.Metadata;
+}
+
+export default async function PhotoPreview(props: PhotoPreviewProps) {
+  const { src, className, previewWidth = 250, metadata } = props;
+
+  const { width, height } = metadata ?? await getImageMetadata(src);
+  const [newWidth, newHeight] = resizeByWidth({
+    width: width!,
+    height: height!,
+    newSize: previewWidth
+  });
+
+  return (
+    <div className={styles.PhotoPreview}>
+      <PhotoPreviewClient
+        src={src}
+        width={newWidth}
+        height={newHeight}
+        className={className}
+        metadata={{ width, height }}
+      />
+    </div>
+  )
+}

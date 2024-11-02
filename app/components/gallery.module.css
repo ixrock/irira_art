@@ -14,3 +14,10 @@
     border-radius: var(--borderRadius);
   }
 }
+
+.showAll {
+  font: 13px var(--fontHeader1);
+  padding-top: var(--spacing);
+  text-transform: uppercase;
+  text-align: right;
+}
