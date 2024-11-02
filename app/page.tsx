@@ -37,9 +37,9 @@ export default function Home() {
       <div className="welcome">
         <h1>Welcome to magical realm of my art!</h1>
         <p>
-          Hello there. I'm Iri Ra, a spiritual artist.
-          I create visionary art, eco art, eco jewellery and digital art.
-          Thank you for visiting my website!
+          Hello there! I am Iri Ra, a professional artist working in the styles of magical realism, symbolism, and visionary art.
+          I paint with oil, create artworks from natural materials, and make jewelry from avocado seeds.
+          Welcome to my wonderful world!
         </p>
       </div>
 
