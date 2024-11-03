@@ -36,7 +36,7 @@ export default function Commissions() {
         <PhotoPreview src="/img/commissons/DSCN6792.jpg"/>
         <PhotoPreview src="/img/commissons/estas_tonne.jpg"/>
         <PhotoPreview src="/img/commissons/DSCN7050.jpg"/>
-        <PhotoPreview src="/img/oil_painting/00_3_IMG_9695(1).JPG"/>
+        <PhotoPreview src="/img/oil_painting/00_3_IMG_9695(1).jpeg"/>
         <PhotoPreview src="/img/study_painting/IMG_9560_edited(1).jpeg"/>
         <PhotoPreview src="/img/study_painting/IMG_9553_edited(1).jpeg"/>
       </div>
