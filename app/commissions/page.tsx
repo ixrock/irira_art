@@ -20,12 +20,25 @@ export default function Commissions() {
       I’ll be glad to make it for you in my unique artistic style.
       <br/>
       <br/>
+      <p>
+        I would be happy to create your portrait in oil or watercolor with
+        colored pencils (I enjoy combining these materials). The portrait can also be
+        done in other mediums, which we can discuss.
+        I can paint a classic portrait of you or add elements of magic! I can choose
+        an image that reflects your soul, inner essence, and the beautiful part of your
+        personality! We can have a brief conversation so I can understand the colors
+        and elements that will best express this. Using classical academic portrait
+        techniques, along with creativity and intuitive painting, I will create a
+        unique portrait just for you.
+      </p>
+      <br/>
       <div className={styles.images}>
         <PhotoPreview src="/img/commissons/DSCN6792.jpg"/>
         <PhotoPreview src="/img/commissons/estas_tonne.jpg"/>
         <PhotoPreview src="/img/commissons/DSCN7050.jpg"/>
-        <PhotoPreview src="/img/commissons/devushka.jpg"/>
-        <PhotoPreview src="/img/commissons/KTSydGpaqVw.jpg"/>
+        <PhotoPreview src="/img/oil_painting/00_3_IMG_9695(1).JPG"/>
+        <PhotoPreview src="/img/study_painting/IMG_9560_edited(1).jpeg"/>
+        <PhotoPreview src="/img/study_painting/IMG_9553_edited(1).jpeg"/>
       </div>
       <br/>
       <h3>Your idea</h3>
@@ -35,24 +48,40 @@ export default function Commissions() {
       your own idea makes a really special gi for your friend or relative.
       <br/>
       <br/>
-      <h3>Wedding gift</h3>
-      If you are searching for a unique wedding gi - consider a painting or an eco style art works of mine.
-      Bring your idea of I can bring mine and as a result we will have a very unique present.
-      Wedding is indeed a very special day , why not make a special present for lucky-in-love people.
-      Take a look at this work I painted as a gi for a wedding. e original size is 50×60.
-      On your order you can pick a size, borrow or create an idea, pick the colours, theme - only your imagination
-      is a limit for options.
-      <br/>
-      <br/>
-      <div className={styles.images}>
-        <PhotoPreview src="/img/commissons/wedding-small.jpg"/>
-        <PhotoPreview src="/img/commissons/wedding-gift.jpg"/>
-      </div>
       <h3>Invitation cards</h3>
       Are you having a wedding or some other event where you need a creative invitation cards? Please, let me know, my art works and unique style will bring colourfulness to any event! I can design
       them using Photoshop or Vector art, make it from a pencil drawing or a watercolor painting.
       <br/>
       <br/>
+      <h3>Prints</h3>
+      My paintings are available both as original works and as prints on canvas,
+      paper, and photo vinyl. The enchanting and magical atmosphere of my captivating
+      images—vivid Mexican dancers, goddesses, Tibetan monks, and Indigenous
+      people—can now adorn any home, inspiring good deeds! These vibrant pieces also
+      create a pleasant atmosphere at home, where one can sit peacefully in the
+      evening with a cup of tea and dream. Perhaps my work will inspire you to pursue
+      your own cherished dreams and plans, and, most importantly, bring a sense of
+      possibility that they can all come true!
+      I also used to make tote bags featuring prints of my work, which is still an
+      option—a unique, high-quality tote bag with double-sided printing! Feel free to
+      reach out!
+      <br/>
+      <br/>
+      <h3>Drawing and Paintings</h3>
+      I’m now offering drawing and painting lessons for
+      everyone interested! Both group and individual sessions are available, either
+      in-person or online! My lessons follow classical standards of drawing and
+      painting, along with creative sessions that help you express your unique,
+      individual nature!
+      It’s so important to step away from daily tasks and immerse yourself in the
+      artistic world of creativity, to relax, shift focus, and listen to the voice of
+      your soul. Plus, drawing and painting are wonderful ways to relieve stress.
+      I can teach the art of still life, drawing and painting people from life or
+      from photos, as well as landscapes from life or photos. Lessons include
+      fundamental knowledge of light and shadow, color theory, and composition. I
+      also offer creative sessions: flow and intuitive drawing, and the creation of a
+      unique Soul painting that will enhance any interior and bring new life to your
+      home!
       <h3>Jewellery</h3>
       I am passionate about handmade and want to share it with you through my jewelry.
       I make it in my own style from avocado seeds adding stones and feathers.

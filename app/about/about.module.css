@@ -7,6 +7,20 @@
 }
 
 .images {
-  display: flex;
-  gap: var(--spacingDouble);
+  --grid-size: 500px;
+
+  display: grid;
+  grid-template-rows: var(--grid-size);
+  grid-auto-flow: column;
+  grid-gap: var(--spacing);
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.images img {
+  object-fit: cover;
+  width: auto;
+  height: var(--grid-size);
+  border-radius: var(--borderRadius);
 }

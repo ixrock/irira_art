@@ -8,12 +8,8 @@ export const metadata: Metadata = {
   title: "Iri Ra - Spiritual artist",
 }
 
+// 1200x374
 const carouselItems: CarouselItem[] = [
-  {
-    imageSrc: "/img/home/digitalart.jpg", // 1200x374
-    title: "Digital art",
-    linkUrl: "/gallery/digital-art"
-  },
   {
     imageSrc: "/img/home/eco_art.jpg",
     title: "Eco art",
@@ -25,7 +21,7 @@ const carouselItems: CarouselItem[] = [
     linkUrl: "/gallery/eco-jewellery"
   },
   {
-    imageSrc: "/img/home/oilpainting.jpg",
+    imageSrc: "/img/home/oil_painting.jpg",
     title: "Oil painting",
     linkUrl: "/gallery/oil-painting"
   }

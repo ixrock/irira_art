@@ -30,8 +30,10 @@ export default function About() {
         paintings, I want to inspire women to believe in themselves and regain confidence, to see in themselves the same beautiful Goddess that I have depicted on canvas with my own hand.</p>
 
       <div className={styles.images}>
-        <p><img src="/img/about/in_flowers.jpg" alt="Flowers mood"/></p>
-        <p><img src="/img/about/in_woods.jpg" alt="Into the wild"/></p>
+        <p><img src="/img/about/1.jpeg" alt="Mexican Art"/></p>
+        <p><img src="/img/about/2.jpeg" alt="Painting Process"/></p>
+        <p><img src="/img/about/3.jpeg" alt="Me and My art"/></p>
+        <p><img src="/img/about/4.jpeg" alt="Artist Painting"/></p>
       </div>
 
       <p>I hope my art inspires women to heal, feel worthy, grow bolder, and find the strength to guide their lives. Through this, they can realize their potential and share their talents with the
@@ -49,9 +51,13 @@ export default function About() {
         this came to me in a time when I was a raw vegetarian. I ate a lot of fruits, but instead of throwing the seeds away I found a new creation for them! So the idea of this art is also in
         motivating people to eat healthy, to eat more fruits, because there is wealth inside of them.</p>
 
-      <p>I'm originally from Russia. I began studying art from a little age, first in an art school then, after moving with my family to Finland, I started to learn art by myself. I also visited art
+      <p>I began studying art from a little age, first in an art school then, after moving with my family to Finland, I started to learn art by myself. I also visited art
         classes in Irida Art School and studied art from Russian artists Viktor Markelov and Elena Kor in their gallery in Helsinki. Finished Graphic Design College «Vantaan ammattiopisto
         Varia».</p>
+
+      <div className={styles.images}>
+        <img src="/img/about/me.jpg" alt="At home in Finland"/>
+      </div>
 
       <p>After this period of self-study and art courses in Finland, I enrolled in the art faculty at the university in St. Petersburg. Now I have graduated and am open to new opportunities and
         prospects!</p>
