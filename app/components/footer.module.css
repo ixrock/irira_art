@@ -2,6 +2,17 @@
   position: relative;
   display: flex;
   justify-content: right;
+  align-items: center;
   gap: var(--spacing);
-  margin-top: var(--spacing);
+
+  .tikTok {
+    --iconSize: 28px;
+  }
+}
+
+.socialIcons img {
+  --iconSize: 25px;
+
+  width: var(--iconSize);
+  height: var(--iconSize);
 }
