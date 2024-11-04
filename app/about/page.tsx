@@ -1,5 +1,6 @@
 import styles from './about.module.css'
 import { Metadata } from "next";
+import PhotoPreview from "@/app/components/photo-preview";
 
 export const metadata: Metadata = {
   title: "About me",
@@ -30,10 +31,10 @@ export default function About() {
         paintings, I want to inspire women to believe in themselves and regain confidence, to see in themselves the same beautiful Goddess that I have depicted on canvas with my own hand.</p>
 
       <div className={styles.images}>
-        <p><img src="/img/about/1.jpeg" alt="Mexican Art"/></p>
-        <p><img src="/img/about/2.jpeg" alt="Painting Process"/></p>
-        <p><img src="/img/about/3.jpeg" alt="Me and My art"/></p>
-        <p><img src="/img/about/4.jpeg" alt="Artist Painting"/></p>
+        <PhotoPreview src="/img/about/1.jpeg" alt="Mexican Art"/>
+        <PhotoPreview src="/img/about/2.jpeg" alt="Painting Process"/>
+        <PhotoPreview src="/img/about/3.jpeg" alt="Me and My art"/>
+        <PhotoPreview src="/img/about/4.jpeg" alt="Artist Painting"/>
       </div>
 
       <p>I hope my art inspires women to heal, feel worthy, grow bolder, and find the strength to guide their lives. Through this, they can realize their potential and share their talents with the

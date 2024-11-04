@@ -10,10 +10,11 @@ export interface PhotoPreviewProps {
   className?: string;
   previewWidth?: number; /* default: 250 */
   metadata?: sharp.Metadata;
+  alt?: string;
 }
 
 export default async function PhotoPreview(props: PhotoPreviewProps) {
-  const { src, className, previewWidth = 250, metadata } = props;
+  const { src, className, previewWidth = 250, metadata, alt } = props;
 
   const { width, height } = metadata ?? await getImageMetadata(src);
   const [newWidth, newHeight] = resizeByWidth({
@@ -30,6 +31,7 @@ export default async function PhotoPreview(props: PhotoPreviewProps) {
         height={newHeight}
         className={className}
         metadata={{ width, height }}
+        alt={alt}
       />
     </div>
   )

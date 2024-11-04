@@ -2,20 +2,19 @@
 }
 
 .images {
-  --grid-size: 270px;
+  --rowWidth: 180px;
+  --rowHeight: 300px;
 
   display: grid;
-  grid-template-rows: var(--grid-size);
-  grid-auto-flow: column;
-  grid-gap: var(--spacing);
-  align-items: center;
-  justify-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(var(--rowWidth), 1fr));
+  grid-auto-rows: var(--rowHeight);
+  gap: var(--spacing);
   overflow: hidden;
 }
 
 .images img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  width: auto;
-  height: var(--grid-size);
   border-radius: var(--borderRadius);
 }

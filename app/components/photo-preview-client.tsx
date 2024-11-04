@@ -15,12 +15,14 @@ export interface PhotoPreviewClientProps {
   height: number;
   className?: string;
   metadata: Partial<sharp.Metadata>;
+  alt?: string;
 }
 
 export default function PhotoPreviewClient(props: PhotoPreviewClientProps) {
-  const { src, className, width, height, metadata } = props;
+  const { src, className, width, height, metadata, alt } = props;
   const [showPreview, showPreviewActivate] = useState(false);
   const [imageReady, setImageReady] = useState(false);
+  const altText = alt ?? src.substring(src.lastIndexOf("/") + 1);
 
   const onClick = async (evt: React.MouseEvent) => {
     evt.preventDefault();
@@ -41,7 +43,7 @@ export default function PhotoPreviewClient(props: PhotoPreviewClientProps) {
           className={className}
           width={width}
           height={height}
-          alt={src.substring(src.lastIndexOf("/") + 1)}
+          alt={altText}
         />
       </Link>
       {showPreview && (
