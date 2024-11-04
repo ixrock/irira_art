@@ -13,17 +13,17 @@ const carouselItems: CarouselItem[] = [
   {
     imageSrc: "/img/home/eco_art.jpg",
     title: "Eco art",
-    linkUrl: "/gallery/eco-art"
+    linkUrl: "/gallery/eco_art"
   },
   {
     imageSrc: "/img/home/jewellery.jpg",
     title: "Handcrafted jewellery",
-    linkUrl: "/gallery/eco-jewellery"
+    linkUrl: "/gallery/eco_jewellery"
   },
   {
     imageSrc: "/img/home/oil_painting.jpg",
     title: "Oil painting",
-    linkUrl: "/gallery/oil-painting"
+    linkUrl: "/gallery/oil_painting"
   }
 ];
 

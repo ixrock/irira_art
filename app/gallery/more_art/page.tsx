@@ -8,10 +8,10 @@ export const metadata: Metadata = {
 }
 
 export default async function MoreAreGallery() {
-  const graphicsImages = await getFilesList("img/more_art/graphics");
-  const dragonImages = await getFilesList("img/more_art/dragon");
-  const ceramicsImages = await getFilesList("img/more_art/ceramics");
-  const scorpionImages = await getFilesList("img/more_art/scorpion");
+  const graphicsImages = await getFilesList("/img/more_art/graphics");
+  const dragonImages = await getFilesList("/img/more_art/dragon");
+  const ceramicsImages = await getFilesList("/img/more_art/ceramics");
+  const scorpionImages = await getFilesList("/img/more_art/scorpion");
 
   return (
     <section>
