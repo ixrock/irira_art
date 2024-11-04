@@ -3,24 +3,29 @@
   overflow: hidden;
 
   > .carouselSlider {
-    --intervalTime: calc(var(--slides) * 10s); /* time for one full rotation */
+    --animationDuration: calc(var(--animDurationSec, 7) * 1s);
+    --intervalTime: calc(var(--slides) * var(--animationDuration));
     --slidesTotal: calc(var(--slides) + 1); /* extra +1 for smooth animation rotation */
+    --gapSize: var(--spacingDouble);
+    --gapSizeOffset: calc(var(--gapSize) * var(--slides));
+    --animationStopAt: calc(var(--slides) * -100% - var(--gapSizeOffset));
+    --animationDelay: calc(var(--animStartDelaySec, 1) * 1s);
 
     width: 100%;
     display: grid;
     grid-template-columns: repeat(var(--slidesTotal), minmax(100%, var(--maxWidth)));
     grid-auto-flow: column;
-    gap: var(--spacing);
+    gap: var(--gapSize);
     animation: carousel var(--intervalTime) infinite;
     animation-timing-function: linear;
-    animation-delay: 1s;
+    animation-delay: var(--animationDelay);
+    /*animation-direction: reverse;*/
 
     .image {
       width: 100%;
     }
 
     &:hover {
-      /*animation-direction: reverse;*/
       animation-play-state: paused;
     }
   }
@@ -31,6 +36,6 @@
     transform: translateX(0);
   }
   to {
-    transform: translateX(calc(var(--slides) * -100%));
+    transform: translateX(var(--animationStopAt));
   }
 }

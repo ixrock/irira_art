@@ -2,20 +2,28 @@ import styles from "./carousel.module.css"
 import React from "react";
 import Link from "next/link";
 
+export interface CarouselProps {
+  items: CarouselItem[];
+  startDelaySec?: number; /* default: 1s */
+  animationDurationSec?: number; /* default: 7s */
+}
+
 export interface CarouselItem {
   imageSrc: string;
   title: string;
   linkUrl?: string; /* render as a link */
 }
 
-export function Carousel({ items }: { items: CarouselItem[] }) {
+export function Carousel({ items, animationDurationSec, startDelaySec }: CarouselProps) {
   const cssVariables = {
     '--slides': items.length,
+    '--animStartDelaySec': startDelaySec,
+    '--animDurationSec': animationDurationSec,
   } as React.CSSProperties;
 
   const itemsForSmoothRotation = [
     ...items,
-    items[0], // duplicate first item for smoother animation rotation
+    items[0], // duplicate first item for smoother animation rotation, this extends a bit real `props.animationDurationSec`
   ];
 
   return (

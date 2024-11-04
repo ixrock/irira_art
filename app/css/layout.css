@@ -18,7 +18,7 @@ main {
   flex-direction: column;
   margin: auto;
   max-width: var(--maxWidth);
-  padding: var(--spacingDouble);
+  padding: var(--spacing) var(--spacingDouble);
   gap: var(--spacingDouble);
 }
 
