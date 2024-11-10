@@ -5,7 +5,7 @@
 .logo {
   height: 8vw;
   min-height: 120px;
-  background: url("/header.webp") no-repeat center -170px / cover;
+  background: url("/header_new2.jpg") no-repeat center;
   filter: sepia(.1);
   border-top-left-radius: var(--borderRadius);
   border-top-right-radius: var(--borderRadius);
