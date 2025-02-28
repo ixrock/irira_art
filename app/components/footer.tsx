@@ -1,10 +1,13 @@
 import styles from "./footer.module.css"
 import React from "react";
-import { fbLink, instagramLink, tiktokLink, vkLink, youtubeLink } from "@/app/config";
+import { fbLink, instagramLink, telegramLink, tiktokLink, vkLink, youtubeLink } from "@/app/config";
 
 export default function Footer() {
   return (
     <footer className={styles.socialIcons}>
+      <a href={telegramLink} target="_blank">
+        <img src="/telegram.svg" alt="Telegram"/>
+      </a>
       <a href={vkLink} target="_blank">
         <img src="/vk.svg" alt="Vk.com"/>
       </a>

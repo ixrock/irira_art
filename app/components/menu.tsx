@@ -15,28 +15,31 @@ export interface MenuItem {
   icon?: React.ReactNode;
   subMenu?: MenuItem[];
   className?: IClassName;
+  onClick?: (evt: React.MouseEvent<HTMLAnchorElement>) => void;
 }
 
 export const siteMenu: MenuItem[] = [
-  { "name": "Home", "href": "/" },
-  { "name": "About", "href": "/about" },
+  { name: "Home", href: "/" },
+  { name: "About", href: "/about" },
   {
-    "name": "My Art", "href": "/gallery", "subMenu": [
-      { "name": "Oil Painting", "href": "/gallery/oil_painting" },
-      { "name": "Eco Art", "href": "/gallery/eco_art" },
-      { "name": "Eco Jewellery", "href": "/gallery/eco_jewellery" },
-      { "name": "Digital art", "href": "/gallery/digital_art" },
-      { "name": "Drawing", "href": "/gallery/drawing" },
-      { "name": "Study Painting", "href": "/gallery/study_painting" },
-      { "name": "Wearable Art", "href": "/gallery/wearable_art" },
-      { "name": "More art", "href": "/gallery/more_art" },
+    name: "My Art",
+    href: "/gallery",
+    subMenu: [
+      { name: "Oil Painting", href: "/gallery/oil_painting" },
+      { name: "Eco Art", href: "/gallery/eco_art" },
+      { name: "Eco Jewellery", href: "/gallery/eco_jewellery" },
+      { name: "Digital art", href: "/gallery/digital_art" },
+      { name: "Drawing", href: "/gallery/drawing" },
+      { name: "Study Painting", href: "/gallery/study_painting" },
+      { name: "Wearable Art", href: "/gallery/wearable_art" },
+      { name: "More art", href: "/gallery/more_art" },
     ],
   },
-  { "name": "Commissions", "href": "/commissions" },
-  { "name": "Buy now", "href": "/buy-now" },
+  { name: "Commissions", href: "/commissions" },
+  { name: "Buy now", href: "/buy-now" },
   {
-    "name": "Contact me",
-    "href": `mailto:${contactEmail}`,
+    name: "Contact me",
+    href: `mailto:${contactEmail}`,
     icon: <EmailIconSvg className={styles.Icon}/>,
   },
 ];
@@ -51,7 +54,7 @@ export default function Menu() {
   }
 
   const menuItems = siteMenu.map((menuItem) => {
-    const { name, href, subMenu, className, icon } = menuItem;
+    const { name, href, subMenu, className, icon, onClick } = menuItem;
     const classNames = cssNames(getLinkClassNames(href), className);
 
     if (subMenu) {
@@ -69,7 +72,7 @@ export default function Menu() {
     }
 
     return (
-      <Link key={href} href={href} className={classNames}>
+      <Link key={href} href={href} className={classNames} onClick={onClick}>
         {icon}{name}
       </Link>
     )
@@ -94,11 +97,11 @@ export interface SubMenuItemProps {
 }
 
 export function SubMenuItem({ item, subMenu, className }: SubMenuItemProps) {
-  const { href, name, icon } = item;
+  const { href, name, icon, onClick } = item;
 
   return (
     <div key={href} className={styles.SubMenu}>
-      <Link href={href} className={cssNames(className, styles.link)}>
+      <Link href={href} className={cssNames(className, styles.link)} onClick={onClick}>
         {icon}{name}
       </Link>
       <div className={styles.items}>
